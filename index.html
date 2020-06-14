@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Graphics editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="btn-container">
+        <button class="img-btn " id="negative">Negative</button>
+        <button class="img-btn " id="blackwhite" >Transform to black and white</button>
+        <a id="link">
+            <button class="img-btn" id="save">Save photo</button>
+        </a>
+
+
+        <p>Brightness</p>
+        <div id="jCont" class="cont">
+            <input type="range" class="inp-btn" id="brightnessId" name="brightness" min="0" max="10" value="0" step="1" />
+            <div id="jAfter" class="dot"></div>
+        </div>
+        <p>Saturation</p>
+        <div id="kCont" class="cont">
+            <input type="range" class="inp-btn" id="saturationId" name="saturation" min="0" max="10" value="0" step="1" />
+            <div id="kAfter" class="dot"></div>
+        </div>
+    </div>
+    
+    <canvas id="canvas" width="500" height="300"></canvas>
+
+    <div class="drawing">
+        <label for="paint">Click to draw !</label>
+        <input type="checkbox" id="paintCheck" name="paint">
+        <label for="head">Color:</label>
+        <input type="color" id="color" name="head" value="#e66465">
+        <label for="size">Size: <span id="sizeValue">0</span></label>
+        <input type="range" class="inp-btn" id="size" name="size" min="0" max="10" step="1" value="0">
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400&subset=latin-ext');
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap:wrap;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+input, button {
+    display: block;
+}
+
+canvas{
+    margin-top:1em;
+}
+
+.img-btn {
+    background: #fff;
+    width: 150px;
+    border: none;
+    box-shadow: -3px 2px 4px #5d5d5dbf;
+    padding: 7px;
+    border-radius: 20px;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s all;
+    margin-top:1em;
+}
+
+.img-btn:hover {
+    background: lightsalmon;
+    color: #fff;
+}
+
+.cont {
+    position: relative;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+
+.inp-btn  {
+    width: 200px;
+    position: relative;
+    cursor: pointer;
+}
+
+.dot {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: rgb(179, 32, 32);
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 1px;
+    transition: 0.2s all;
+}
+
+
+input[type=range]::-webkit-slider-thumb {
+    position: relative;
+    z-index: 10000;
+    opacity: 0;
+    cursor: pointer;
+    width: 24px;
+}
+.drawing{
+    margin-top: 1em;
+    margin-left: 2em;
+}
+@media (max-width: 915px) {
+    #canvas{
+        order:0
+    }
+    .btn-container{
+        order:1;
+    }
+    .drawing{
+        order:2;
+    }
+  }
